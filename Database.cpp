@@ -38,7 +38,7 @@ void createCollection(std::string input) {
     if (!temp) {
         std::cout << "Error while creating the file\n\n";
     } else {
-        std::cout << "A collection named" << fileName << "was created successfully\n\n";
+        std::cout << "A collection named " << fileName << " was created successfully\n\n";
         temp.close();
     }
 }
@@ -147,7 +147,7 @@ void homeMenu() {
                  "delete -Name: deletes an existing collection of name Name\n"
                  "rename -Name: renames the collection of name Name\n"
                  "add -Name: adds one or more key-value couples to collection of name Name\n"
-                 "print -Name: prints all the key-value couples inside collection of name -Name\n";
+                 "print -Name: prints all the key-value couples inside collection of name -Name\n\n";
 
     std::string userInput;
     std::string funcToCall;
@@ -155,7 +155,6 @@ void homeMenu() {
     bool spaceRead = false;
 
     std::getline(std::cin, userInput);
-    int iteration = 0;
 
     for (char c : userInput) {
         if (c == ' ') {
